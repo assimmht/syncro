@@ -10,6 +10,10 @@ const Container = styled.div`
   ${mobile({ padding: "0px", flexDirection:"column" })}
 `;
 
+const Image = styled.img`
+  width: 100%;
+`;
+
 const Categories = () => {
   return (
     <Container>

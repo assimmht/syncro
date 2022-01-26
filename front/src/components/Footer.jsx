@@ -109,17 +109,17 @@ import {
           </SocialContainer>
         </Left>
         <Center>
-          <Title>Useful Links</Title>
+          <Title>Liens utiles</Title>
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>Cart</ListItem>
-            <ListItem>Man Fashion</ListItem>
-            <ListItem>Woman Fashion</ListItem>
-            <ListItem>Accessories</ListItem>
-            <ListItem>My Account</ListItem>
-            <ListItem>Order Tracking</ListItem>
-            <ListItem>Wishlist</ListItem>
-            <ListItem>Terms</ListItem>
+            <ListItem>Accueil</ListItem>
+            <ListItem>Panier</ListItem>
+            <ListItem>Mode Homme</ListItem>
+            <ListItem>Mode Femme</ListItem>
+            <ListItem>Accessoires</ListItem>
+            <ListItem>Mon compte</ListItem>
+            <ListItem>Suivi de commande</ListItem>
+            <ListItem>Liste de souhaits</ListItem>
+            <ListItem>Condition Générale</ListItem>
           </List>
         </Center>
         <Right>

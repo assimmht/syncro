@@ -7,20 +7,24 @@ const authRoute = require("./router/auth.js");
 const productRoute = require("./router/product.js");
 const cartRoute = require("./router/cart.js");
 const orderRoute = require("./router/order.js");
+const stripeRoute = require("./router/stripe.js");
+const cors = require("cors");
 
 dotenv.config();
 
 mongoose.connect(process.env.MONGO_URL)
-.then(() => console.log("DB connect successfull!")).catch((err) => console.log(err));
+    .then(() => console.log("DB connect successfull!")).catch((err) => console.log(err));
 
 app.use(express.json());
+app.use(cors());
 
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
+app.use("/api/checkout", stripeRoute);
 
-app.listen(process.env.PORT || 5000, () =>{
+app.listen(process.env.PORT || 5000, () => {
     console.log("Server Backend is Running")
 });

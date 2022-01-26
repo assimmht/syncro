@@ -54,30 +54,45 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 80%;
+  width: 100%;
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
-  padding: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Title = styled.h1`
   font-size: 70px;
+  color: white
 `;
 
 const Desc = styled.p`
   margin: 50px 0px;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 500;
   letter-spacing: 3px;
+  color: white;
 `;
 
 const Button = styled.button`
   padding: 10px;
   font-size: 20px;
-  background-color: transparent;
+  background-color: black;
+  color: white;
   cursor: pointer;
+  &:hover {
+    background-color: #DBD310;
+    color: black;
+  }
 `;
 
 const Slider = () => {
@@ -92,26 +107,26 @@ const Slider = () => {
   
     return (
       <Container>
-        <Arrow direction="left" onClick={() => handleClick("left")}>
+        {/* <Arrow direction="left" onClick={() => handleClick("left")}>
           <ArrowLeftOutlinedIcon />
-        </Arrow>
+        </Arrow> */}
         <Wrapper slideIndex={slideIndex}>
           {sliderItems.map((item) => (
             <Slide bg={item.bg} key={item.id}>
               <ImgContainer>
                 <Image src={item.img} />
-              </ImgContainer>
-              <InfoContainer>
+                <InfoContainer>
                 <Title>{item.title}</Title>
                 <Desc>{item.desc}</Desc>
-                <Button>SHOW NOW</Button>
+                <Button>En savoir plus</Button>
               </InfoContainer>
+              </ImgContainer>
             </Slide>
           ))}
         </Wrapper>
-        <Arrow direction="right" onClick={() => handleClick("right")}>
+        {/* <Arrow direction="right" onClick={() => handleClick("right")}>
           <ArrowRightOutlinedIcon />
-        </Arrow>
+        </Arrow> */}
       </Container>
     );
   };
